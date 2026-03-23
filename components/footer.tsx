@@ -19,6 +19,13 @@ export function Footer() {
           >
             contact@edgealphix.com
           </a>
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            EdgeAlphix LLC
+            <br />
+            Anaheim, CA 92802
+            <br />
+            United States
+          </p>
         </div>
 
         <div>

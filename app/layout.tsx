@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "EdgeAlphix LLC",
   description:
     "EdgeAlphix is redefining modern infrastructure across cloud, network, and open systems.",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 };
 
 export default function RootLayout({
