@@ -16,7 +16,10 @@ function addSources(directory: string) {
   }
 }
 for (const directory of ["app", "components", "content", "lib", "public"]) addSources(directory);
-hash.update(readFileSync("package-lock.json"));
+for (const file of ["next.config.ts", "package.json", "package-lock.json", "postcss.config.mjs", "tsconfig.json"]) {
+  hash.update(file);
+  hash.update(readFileSync(file));
+}
 const buildId = hash.digest("hex").slice(0, 20);
 
 const nextConfig: NextConfig = {

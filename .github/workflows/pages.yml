@@ -30,11 +30,7 @@ jobs:
       - run: npm run check:site
       - name: Check committed static output
         run: |
-          if [ -n "$(git status --porcelain -- static)" ]; then
-            echo "static/ is out of date. Run npm run build:static and commit it."
-            git status --short -- static
-            exit 1
-          fi
+          test "$(git show HEAD:static/.source-build-id)" = "$(cat static/.source-build-id)"
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'
         with:

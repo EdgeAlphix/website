@@ -13,6 +13,7 @@ for (const route of routes) {
   }
 }
 assert.equal((await readFile(resolve("static", "CNAME"), "utf8")).trim(), "edgealphix.com");
+assert.equal(await readFile(resolve("static", ".source-build-id"), "utf8"), await readFile(resolve(".next", "BUILD_ID"), "utf8"));
 await stat(resolve("static", ".nojekyll"));
 await stat(resolve("static", "sitemap.xml"));
 await stat(resolve("static", "robots.txt"));
