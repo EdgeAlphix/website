@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import PrivacyPolicyContent from "@/content/legal/privacy-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/privacy-policy" },
+  title: "Privacy Policy",
   description: "Privacy Policy for EdgeAlphix LLC.",
 };
 

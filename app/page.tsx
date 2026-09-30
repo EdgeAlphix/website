@@ -1,135 +1,81 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBanner } from "@/components/cta-banner";
-import { FeatureGrid } from "@/components/feature-grid";
-import { ProjectCards } from "@/components/project-cards";
-import { StatsSection } from "@/components/stats-section";
-import { homeFeatures, infrastructurePillars, projects, stats } from "@/lib/content";
+import { productSteps, productUrl } from "@/lib/content";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function HomePage() {
   return (
     <>
-      <section className="section-padding pb-8 pt-16 md:pt-24">
-        <div className="container-width hero-grid">
-          <div className="max-w-4xl">
-            <p className="eyebrow">EdgeAlphix LLC</p>
-            <h1 className="mt-6 font-[var(--font-heading)] text-5xl font-semibold tracking-[-0.06em] text-slate-950 md:text-7xl">
-              Infrastructure,
-              <br />
-              Done Right.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-              EdgeAlphix builds and operates internet infrastructure across network, cloud, and open systems. Real systems. Real traffic. Real operational responsibility.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-500">
-              <span className="rounded-full border border-slate-900/8 bg-white/70 px-3 py-1.5">
-                Global routing
-              </span>
-              <span className="rounded-full border border-slate-900/8 bg-white/70 px-3 py-1.5">
-                Infrastructure software
-              </span>
-              <span className="rounded-full border border-slate-900/8 bg-white/70 px-3 py-1.5">
-                Open systems
-              </span>
-            </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="mailto:contact@edgealphix.com" className="button-primary">
-                Contact Us
-              </a>
-              <a href="/infrastructure" className="button-secondary">
-                View Infrastructure
-              </a>
-            </div>
-          </div>
-
-          <div className="surface rounded-[2rem] p-7">
-            <div className="grid gap-5">
-              <div>
-                <div className="text-xs uppercase tracking-[0.18em] text-slate-500">Category</div>
-                <div className="mt-2 text-2xl font-semibold text-slate-950">Modern infrastructure</div>
-              </div>
-              <div className="rule pt-5">
-                <div className="text-xs uppercase tracking-[0.18em] text-slate-500">Network identity</div>
-                <div className="mt-2 text-2xl font-semibold text-slate-950">AS201243</div>
-              </div>
-              <div className="rule pt-5">
-                <div className="text-xs uppercase tracking-[0.18em] text-slate-500">Architecture</div>
-                <div className="mt-2 text-2xl font-semibold text-slate-950">IPv6-first</div>
-              </div>
-              <div className="rule pt-5">
-                <div className="text-xs uppercase tracking-[0.18em] text-slate-500">Global reach</div>
-                <div className="mt-2 text-2xl font-semibold text-slate-950">3 regions</div>
-              </div>
-            </div>
+      <section className="home-hero container-width">
+        <div className="home-hero-copy">
+          <p className="section-label"><span className="label-line" /> EdgeAlphix LLC / DigitalPlat One</p>
+          <h1>We build <em>DigitalPlat One.</em></h1>
+          <p className="hero-description">DigitalPlat One is EdgeAlphix LLC&apos;s primary business. It brings domains, websites, forms, and analytics into one workspace.</p>
+          <div className="hero-actions">
+            <a href={productUrl} className="button button-dark">Explore DigitalPlat One <span aria-hidden="true">↗</span></a>
+            <Link href="/infrastructure" className="text-link">Our infrastructure <span aria-hidden="true">→</span></Link>
           </div>
         </div>
+        <div className="hero-system" role="img" aria-label="DigitalPlat One connects domains, websites, forms, and analytics in one workspace">
+          <div className="system-head"><span className="system-symbol">✳</span><span>DIGITALPLAT / ONE</span><span className="system-head-right">A connected workspace</span></div>
+          <div className="system-stage">
+            <div className="system-grid" aria-hidden="true" />
+            <div className="system-orbit orbit-one" aria-hidden="true" />
+            <div className="system-orbit orbit-two" aria-hidden="true" />
+            <div className="system-core"><span>ONE</span><small>FROM IDEA TO AUDIENCE</small></div>
+            <span className="system-point point-domains">01 / DOMAINS</span>
+            <span className="system-point point-pages">02 / PAGES</span>
+            <span className="system-point point-forms">03 / FORMS</span>
+            <span className="system-point point-analytics">04 / ANALYTICS</span>
+          </div>
+          <div className="system-foot"><span>DEFINE → PUBLISH → UNDERSTAND</span><span>EDGEALPHIX LLC · 2026</span></div>
+        </div>
+        <div className="hero-index"><span>01 / 04</span><span>PRODUCT · INFRASTRUCTURE · ENGINEERING</span></div>
       </section>
 
-      <section className="section-tight">
+      <section className="product-intro section-space" id="digitalplat-one">
         <div className="container-width">
-          <div className="startup-grid text-sm text-slate-500">
-            <div className="surface rounded-[1.5rem] px-5 py-4">
-              Founder-led infrastructure company
-            </div>
-            <div className="surface rounded-[1.5rem] px-5 py-4">
-              Public network operations with visible proof
-            </div>
-            <div className="surface rounded-[1.5rem] px-5 py-4">
-              Open-source reach at global scale
-            </div>
+          <div className="section-topline"><p className="section-label">01 / Our primary business</p><span>Built for developers and small teams</span></div>
+          <div className="intro-grid">
+            <h2>From your first domain to your first visitors.</h2>
+            <div><p>Starting a presence online should feel like one continuous task. DigitalPlat One brings the essential steps together, with room to add more tools as you grow.</p><a href={productUrl} className="text-link">See the full platform <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <ol className="product-path">
+            {productSteps.map((step) => <li key={step.number}><span className="step-number">{step.number}</span><h3>{step.name}</h3><p>{step.description}</p><span className="step-arrow" aria-hidden="true">↗</span></li>)}
+          </ol>
+        </div>
+      </section>
+
+      <section className="platform-section section-space">
+        <div className="container-width platform-grid">
+          <div className="platform-copy"><p className="section-label">02 / The operating company</p><h2>Software with an operator behind it.</h2><p>EdgeAlphix develops DigitalPlat One and works across the network and systems layers that support internet products. Product decisions and infrastructure operations belong in the same conversation.</p><Link href="/about" className="text-link">About EdgeAlphix <span aria-hidden="true">→</span></Link></div>
+          <div className="platform-lines" aria-label="EdgeAlphix areas of work">
+            <div><span>01</span><strong>DigitalPlat One</strong><small>Product</small></div>
+            <div><span>02</span><strong>Network operations</strong><small>Infrastructure</small></div>
+            <div><span>03</span><strong>Systems engineering</strong><small>Research & build</small></div>
           </div>
         </div>
       </section>
 
-      <StatsSection stats={stats} />
+      <section className="infrastructure-teaser section-space">
+        <div className="container-width infrastructure-teaser-grid">
+          <div><p className="section-label">03 / Beyond the product</p><h2>A public network. A clear operating identity.</h2></div>
+          <div><p>EdgeAlphix operates AS201243 and publishes its peering posture. Our infrastructure work spans routing, cloud environments, and software built for operators.</p><Link href="/infrastructure" className="text-link">Explore infrastructure <span aria-hidden="true">→</span></Link></div>
+        </div>
+        <div className="container-width proof-strip"><span>AS201243</span><span>PUBLIC NETWORK IDENTITY</span><span>PEERING & ROUTING</span></div>
+      </section>
 
-      <FeatureGrid
-        eyebrow="What We Do"
-        title="Internet infrastructure with engineering depth."
-        description="We combine product thinking, systems depth, and real operational responsibility in one company."
-        features={homeFeatures}
-      />
-
-      <FeatureGrid
-        eyebrow="Infrastructure"
-        title="Public infrastructure with room to grow."
-        description="A public network, a credible platform layer, and software that can grow into multiple infrastructure products."
-        features={infrastructurePillars}
-      />
-
-      <ProjectCards projects={projects} />
-
-      <section className="section-padding pt-0">
+      <section className="work-section section-space">
         <div className="container-width">
-          <div className="surface rounded-[2rem] p-8 md:p-10">
-            <p className="eyebrow">Working Together</p>
-            <h2 className="mt-5 max-w-3xl font-[var(--font-heading)] text-3xl font-semibold tracking-[-0.03em] text-slate-950 md:text-5xl">
-              We work directly with teams operating real infrastructure.
-            </h2>
-            <div className="mt-6 max-w-3xl space-y-4 text-base leading-8 text-slate-700">
-              <p>
-                Not every problem fits a product. Some require work at the network,
-                platform, or systems layer.
-              </p>
-              <p>
-                Routing, cloud environments, DNS infrastructure, and systems work
-                — where details matter, and systems have to hold under production
-                conditions.
-              </p>
-              <p>
-                If you&apos;re already there, we&apos;re open to a conversation.
-              </p>
-            </div>
-            <a
-              href="https://support.edgealphix.com/?recipient=EDGEALPHIX_CONTACT"
-              target="_blank"
-              rel="noreferrer"
-              className="button-secondary mt-8"
-            >
-              Start a conversation
-            </a>
+          <div className="section-topline"><p className="section-label">04 / More from EdgeAlphix</p><span>Focused engineering work</span></div>
+          <div className="work-grid">
+            <Link href="/services"><span>01 / SERVICES</span><h3>Infrastructure work with people who operate it.</h3><p>Network, platform, and systems engineering for teams with specific technical needs.</p><b aria-hidden="true">↗</b></Link>
+            <Link href="/projects"><span>02 / PROJECTS</span><h3>Open systems built from practical problems.</h3><p>Explore work on operating systems, service management, and developer tools.</p><b aria-hidden="true">↗</b></Link>
           </div>
         </div>
       </section>
-
       <CtaBanner />
     </>
   );

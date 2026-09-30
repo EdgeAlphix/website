@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import PolicyContent from "@/content/legal/us-sanctions-compliance-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "U.S. Sanctions Compliance Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/us-sanctions-compliance-policy" },
+  title: "U.S. Sanctions Compliance Policy",
   description: "U.S. Sanctions Compliance Policy for EdgeAlphix LLC.",
 };
 

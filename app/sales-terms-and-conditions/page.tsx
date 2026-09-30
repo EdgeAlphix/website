@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import SalesTermsContent from "@/content/legal/sales-terms-and-conditions.mdx";
 
 export const metadata: Metadata = {
-  title: "Sales Terms and Conditions | EdgeAlphix LLC",
+  alternates: { canonical: "/sales-terms-and-conditions" },
+  title: "Sales Terms and Conditions",
   description: "Sales Terms and Conditions for EdgeAlphix LLC.",
 };
 

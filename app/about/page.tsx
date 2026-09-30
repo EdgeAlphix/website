@@ -1,75 +1,25 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
-import { SectionHeading } from "@/components/section-heading";
+import { productUrl } from "@/lib/content";
 
-const principles = [
-  {
-    title: "Founder-led",
-    description:
-      "EdgeAlphix is led by Edward Hsing, an infrastructure engineer working across internet systems, open source, and global operations.",
-  },
-  {
-    title: "Ecosystem-native",
-    description:
-      "The company sits inside a broader builder ecosystem that includes the DigitalPlat Foundation, OpenSource.ngo, and widely used open-source work.",
-  },
-  {
-    title: "Long-term thinking",
-    description:
-      "The goal is not just to run systems well, but to build technology that stays useful over time.",
-  },
-];
+export const metadata: Metadata = {
+  title: "Company",
+  description: "Meet EdgeAlphix LLC, the company building DigitalPlat One and operating internet infrastructure.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="About"
-        title="Built by people who operate real systems."
-        description="EdgeAlphix is the company Edward Hsing is building around network infrastructure, open systems, and long-term technical work."
-        asideTitle="Why EdgeAlphix exists"
-        asideBody="To build infrastructure that is reliable, understandable, and strong enough to hold up in production."
-        points={[
-          "Founded by Edward Hsing",
-          "Founder of the DigitalPlat Foundation and OpenSource.ngo",
-          "Creator of the DigitalPlat FreeDomain project with 150,000+ GitHub stars globally",
-        ]}
-      />
-
-      <section className="section-padding pt-0">
-        <div className="container-width grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeading
-            eyebrow="Story"
-            title="From open-source reach to infrastructure execution."
-            description="EdgeAlphix builds on years of open-source distribution, community building, and systems work."
-          />
-
-          <div className="surface rounded-[2rem] p-8">
-            <p className="text-lg leading-8 text-slate-700">
-              Before EdgeAlphix, Edward built infrastructure and institutions around open access to the internet. At 15, he founded the DigitalPlat Foundation (501(c)(3)) and created DigitalPlat FreeDomain — a domain infrastructure project that has reached over 150,000 GitHub stars globally. He later founded OpenSource.ngo, extending this work into a broader open-source initiative.
-            </p>
-            <p className="mt-5 text-lg leading-8 text-slate-700">
-              EdgeAlphix turns that experience into an infrastructure company focused on a real network edge, solid software, and a stack that stays open, legible, and useful.
-            </p>
-          </div>
-        </div>
+      <PageHero eyebrow="Company / EdgeAlphix LLC" title="We build useful internet products." description="EdgeAlphix is the operating company behind DigitalPlat One. We work across product, network, and systems engineering." asideTitle="At a glance" asideBody="Based in Anaheim, California. Led by founder Edward Hsing." />
+      <section className="section-space container-width editorial-grid">
+        <div><p className="section-label">01 / Why we exist</p><h2>The internet gets better when the tools are easier to use.</h2></div>
+        <div className="editorial-copy"><p>DigitalPlat One brings domains, sites, forms, and analytics into a single workspace. It is our main business and the clearest expression of how we work: bring connected tasks together without hiding the underlying systems.</p><p>That work is informed by direct experience with routing, cloud environments, and open systems. We build products and operate infrastructure with attention to how they perform after launch.</p><a href={productUrl} className="text-link">Explore DigitalPlat One <span aria-hidden="true">↗</span></a></div>
       </section>
-
-      <section className="section-padding pt-0">
-        <div className="container-width grid gap-4 md:grid-cols-3">
-          {principles.map((principle) => (
-            <div key={principle.title} className="surface rounded-[1.75rem] p-7">
-              <h2 className="font-[var(--font-heading)] text-2xl font-semibold tracking-[-0.03em] text-slate-950">
-                {principle.title}
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-600">
-                {principle.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      <section className="section-space company-principles"><div className="container-width"><p className="section-label">02 / How we work</p><div className="principle-grid"><article><span>01</span><h3>Build for use.</h3><p>Start with a real job, then make the path from first step to finished result clear.</p></article><article><span>02</span><h3>Operate what we build.</h3><p>Product decisions should account for the network, systems, and people behind them.</p></article><article><span>03</span><h3>Keep it legible.</h3><p>Clear interfaces, direct language, and technology that can be understood over time.</p></article></div></div></section>
+      <section className="section-space container-width editorial-grid"><div><p className="section-label">03 / Wider ecosystem</p><h2>Related work, distinct organizations.</h2></div><div className="editorial-copy"><p>Edward Hsing also founded DigitalPlat Foundation, Inc., an independent U.S. public charity. Its charitable and public-interest initiatives are separate from EdgeAlphix LLC&apos;s commercial operations.</p><p>EdgeAlphix develops and operates DigitalPlat One as a commercial product.</p><Link href="/projects" className="text-link">See other projects <span aria-hidden="true">→</span></Link></div></section>
       <CtaBanner />
     </>
   );

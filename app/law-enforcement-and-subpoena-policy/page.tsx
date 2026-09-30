@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import PolicyContent from "@/content/legal/law-enforcement-and-subpoena-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "Law Enforcement & Subpoena Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/law-enforcement-and-subpoena-policy" },
+  title: "Law Enforcement & Subpoena Policy",
   description: "Law Enforcement & Subpoena Policy for EdgeAlphix LLC.",
 };
 

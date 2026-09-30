@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import RefundPolicyContent from "@/content/legal/refund-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/refund-policy" },
+  title: "Refund Policy",
   description: "Refund Policy for EdgeAlphix LLC.",
 };
 

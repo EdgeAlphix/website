@@ -1,51 +1,20 @@
+import type { Metadata } from "next";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { serviceGroups } from "@/lib/content";
 
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Network, platform, and systems engineering services from EdgeAlphix LLC.",
+  alternates: { canonical: "/services" },
+};
+
 export default function ServicesPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Services"
-        title="Services for teams building serious infrastructure."
-        description="We work with companies that need to move faster on network, cloud, and platform architecture without lowering the technical bar."
-        asideTitle="How we work"
-        asideBody="Hands-on technical work, direct operator access, and decisions shaped for long-term use."
-        points={[
-          "Product-grade cloud and network systems",
-          "Reliability and security built in from the start",
-          "Direct founder-operator level guidance",
-        ]}
-      />
-
-      <section className="section-padding pt-0">
-        <div className="container-width divide-y divide-slate-900/8">
-          {serviceGroups.map((group) => (
-            <article key={group.title} className="grid gap-6 py-8 lg:grid-cols-[0.9fr_1.1fr]">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
-                  Service Area
-                </p>
-                <h2 className="mt-4 font-[var(--font-heading)] text-3xl font-semibold tracking-[-0.03em] text-slate-950">
-                  {group.title}
-                </h2>
-                <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
-                  {group.body}
-                </p>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2">
-                {group.bullets.map((bullet) => (
-                  <div key={bullet} className="border-t border-slate-900/8 pt-4 text-sm text-slate-700">
-                    {bullet}
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
+      <PageHero eyebrow="Services / Engineering" title="For work that needs a direct operator." description="Alongside DigitalPlat One, EdgeAlphix works with teams on defined network, platform, and systems problems." asideTitle="How to begin" asideBody="Tell us what you run, what needs to change, and where your current constraints are." />
+      <section className="section-space container-width"><div className="section-topline"><p className="section-label">01 / Areas of work</p><span>Scoped technical engagements</span></div><div className="line-list service-list">{serviceGroups.map((group) => <article key={group.number}><span>{group.number}</span><div><h2>{group.title}</h2><p>{group.description}</p></div><small>{group.detail}</small></article>)}</div></section>
+      <section className="section-space company-principles"><div className="container-width editorial-grid"><div><p className="section-label">02 / Working style</p><h2>Start with the system in front of you.</h2></div><div className="editorial-copy"><p>We begin with the actual architecture, operating constraints, and intended result. From there, we define work that can be built, reviewed, and maintained.</p><a href="mailto:contact@edgealphix.com" className="text-link">Discuss a project <span aria-hidden="true">↗</span></a></div></div></section>
       <CtaBanner />
     </>
   );

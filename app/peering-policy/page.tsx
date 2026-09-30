@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import PeeringPolicyContent from "@/content/legal/peering-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "Peering Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/peering-policy" },
+  title: "Peering Policy",
   description: "Peering Policy for EdgeAlphix Network (AS201243).",
 };
 

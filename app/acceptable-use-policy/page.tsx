@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import AupContent from "@/content/legal/acceptable-use-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "Acceptable Use Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/acceptable-use-policy" },
+  title: "Acceptable Use Policy",
   description: "Acceptable Use Policy for EdgeAlphix LLC.",
 };
 

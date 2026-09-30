@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f8f6"/>
+  <path d="M0 80H1200M0 550H1200M80 0V630M1120 0V630" stroke="#dadeda"/>
+  <rect x="82" y="82" width="40" height="40" rx="10" fill="#101512"/>
+  <path d="M93 111l9-18 9 18M96 106h12" fill="none" stroke="#fff" stroke-width="3"/>
+  <text x="140" y="112" fill="#101512" font-family="Arial,sans-serif" font-size="31" font-weight="700">EdgeAlphix</text>
+  <text x="82" y="295" fill="#101512" font-family="Arial,sans-serif" font-size="69" font-weight="700">The company behind</text>
+  <text x="82" y="380" fill="#101512" font-family="Arial,sans-serif" font-size="69" font-weight="700">DigitalPlat One.</text>
+  <text x="82" y="510" fill="#52615b" font-family="Arial,sans-serif" font-size="25">PRODUCT  /  INFRASTRUCTURE  /  ENGINEERING</text>
+  <circle cx="1050" cy="350" r="54" fill="#2e644c"/>
+  <circle cx="1050" cy="350" r="104" fill="none" stroke="#b5cbc0" stroke-width="2"/>
+</svg>

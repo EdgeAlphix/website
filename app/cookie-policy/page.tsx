@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import CookiePolicyContent from "@/content/legal/cookie-policy.mdx";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | EdgeAlphix LLC",
+  alternates: { canonical: "/cookie-policy" },
+  title: "Cookie Policy",
   description: "Cookie Policy for EdgeAlphix LLC.",
 };
 

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import NoticeContent from "@/content/legal/do-not-sell-or-share-my-personal-information.mdx";
 
 export const metadata: Metadata = {
-  title: "Do Not Sell or Share My Personal Information | EdgeAlphix LLC",
+  alternates: { canonical: "/do-not-sell-or-share-my-personal-information" },
+  title: "Do Not Sell or Share My Personal Information",
   description: "Do Not Sell or Share My Personal Information notice for EdgeAlphix LLC.",
 };
 
