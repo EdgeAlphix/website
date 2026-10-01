@@ -9,13 +9,13 @@ const bodyFont = Manrope({ variable: "--font-body", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://edgealphix.com"),
-  title: { default: "EdgeAlphix | The company behind DigitalPlat One", template: "%s | EdgeAlphix" },
-  description: "EdgeAlphix LLC builds DigitalPlat One and operates internet infrastructure for developers and teams.",
+  title: { default: "EdgeAlphix | DigitalPlat One, open source, and network", template: "%s | EdgeAlphix" },
+  description: "EdgeAlphix LLC builds DigitalPlat One, EdgeOS, EdgeTerm, and EdgeIoT, and runs servers across regions.",
   openGraph: {
     type: "website",
     siteName: "EdgeAlphix",
-    title: "EdgeAlphix | The company behind DigitalPlat One",
-    description: "Domains, websites, forms, and analytics in one place. Built by EdgeAlphix LLC.",
+    title: "EdgeAlphix | DigitalPlat One, open source, and network",
+    description: "DigitalPlat One, EdgeOS, EdgeTerm, EdgeIoT, and the EdgeAlphix server network.",
     url: "https://edgealphix.com/",
     images: [{ url: "/opengraph-image.svg", width: 1200, height: 630, alt: "EdgeAlphix and DigitalPlat One" }],
   },

@@ -7,8 +7,8 @@ export function Footer() {
       <div className="container-width footer-main">
         <div className="footer-lead">
           <p className="section-label">EdgeAlphix LLC</p>
-          <h2>From domain<br />to audience.</h2>
-          <p>We build DigitalPlat One and operate the infrastructure behind our work.</p>
+          <h2>Software and<br />servers.</h2>
+          <p>DigitalPlat One is our main business. We also work on EdgeOS, EdgeTerm, and EdgeIoT, and run a global server network.</p>
           <a href={productUrl} className="text-link">Explore DigitalPlat One <span aria-hidden="true">↗</span></a>
         </div>
         <div className="footer-list">

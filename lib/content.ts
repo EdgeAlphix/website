@@ -1,4 +1,7 @@
 export const productUrl = "https://digitalplat.one/";
+export const edgeOsUrl = "https://github.com/EdgeOS-Project/kernel";
+export const edgeTermUrl = "https://github.com/EdwardLab/EdgeTerm";
+export const peeringDbUrl = "https://www.peeringdb.com/asn/201243";
 
 export const siteNav = [
   { href: productUrl, label: "DigitalPlat One", external: true },

@@ -11,7 +11,13 @@ for (const route of routes) {
   if (["", "about", "projects"].includes(route)) {
     assert.match(html, /https:\/\/digitalplat\.one\//, filename);
   }
+  if (["", "projects"].includes(route)) {
+    for (const project of ["EdgeOS", "EdgeTerm", "EdgeIoT"]) assert.match(html, new RegExp(project), filename);
+    assert.match(html, /https:\/\/github\.com\/EdgeOS-Project\/kernel/, filename);
+    assert.match(html, /https:\/\/github\.com\/EdwardLab\/EdgeTerm/, filename);
+  }
 }
+assert.match(await readFile(resolve("static", "projects.html"), "utf8"), /id="edgeiot"/);
 assert.equal((await readFile(resolve("static", "CNAME"), "utf8")).trim(), "edgealphix.com");
 assert.equal(await readFile(resolve("static", ".source-build-id"), "utf8"), await readFile(resolve(".next", "BUILD_ID"), "utf8"));
 await stat(resolve("static", ".nojekyll"));
