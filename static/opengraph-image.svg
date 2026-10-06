@@ -4,9 +4,9 @@
   <rect x="82" y="82" width="40" height="40" rx="10" fill="#101512"/>
   <path d="M93 111l9-18 9 18M96 106h12" fill="none" stroke="#fff" stroke-width="3"/>
   <text x="140" y="112" fill="#101512" font-family="Arial,sans-serif" font-size="31" font-weight="700">EdgeAlphix</text>
-  <text x="82" y="295" fill="#101512" font-family="Arial,sans-serif" font-size="69" font-weight="700">The company behind</text>
-  <text x="82" y="380" fill="#101512" font-family="Arial,sans-serif" font-size="69" font-weight="700">DigitalPlat One.</text>
-  <text x="82" y="510" fill="#52615b" font-family="Arial,sans-serif" font-size="25">PRODUCT  /  INFRASTRUCTURE  /  ENGINEERING</text>
+  <text x="82" y="295" fill="#101512" font-family="Arial,sans-serif" font-size="69" font-weight="700">Software and servers.</text>
+  <text x="82" y="380" fill="#101512" font-family="Arial,sans-serif" font-size="48" font-weight="700">EdgeOS  ·  EdgeTerm  ·  EdgeIoT</text>
+  <text x="82" y="510" fill="#52615b" font-family="Arial,sans-serif" font-size="25">OPEN SOURCE  /  DIGITALPLAT ONE  /  NETWORK</text>
   <circle cx="1050" cy="350" r="54" fill="#2e644c"/>
   <circle cx="1050" cy="350" r="104" fill="none" stroke="#b5cbc0" stroke-width="2"/>
 </svg>

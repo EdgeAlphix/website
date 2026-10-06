@@ -8,8 +8,9 @@ export function Footer() {
         <div className="footer-lead">
           <p className="section-label">EdgeAlphix LLC</p>
           <h2>Software and<br />servers.</h2>
-          <p>DigitalPlat One is our main business. We also work on EdgeOS, EdgeTerm, and EdgeIoT, and run a global server network.</p>
-          <a href={productUrl} className="text-link">Explore DigitalPlat One <span aria-hidden="true">↗</span></a>
+          <p>We build EdgeOS, EdgeTerm, EdgeIoT, and DigitalPlat One, and run a global server network.</p>
+          <Link href="/projects" className="text-link">Explore open source <span aria-hidden="true">→</span></Link><br />
+          <a href={productUrl} className="text-link">DigitalPlat One <span aria-hidden="true">↗</span></a>
         </div>
         <div className="footer-list">
           <h3>Explore</h3>

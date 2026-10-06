@@ -4,10 +4,10 @@ export const edgeTermUrl = "https://github.com/EdwardLab/EdgeTerm";
 export const peeringDbUrl = "https://www.peeringdb.com/asn/201243";
 
 export const siteNav = [
+  { href: "/projects", label: "Open Source" },
   { href: productUrl, label: "DigitalPlat One", external: true },
   { href: "/infrastructure", label: "Infrastructure" },
   { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
   { href: "/about", label: "Company" },
 ];
 
@@ -57,10 +57,10 @@ export const serviceGroups = [
 
 export const footerLinks = {
   company: [
+    { href: "/projects", label: "Open Source" },
     { href: productUrl, label: "DigitalPlat One" },
     { href: "/infrastructure", label: "Infrastructure" },
     { href: "/services", label: "Services" },
-    { href: "/projects", label: "Projects" },
     { href: "/about", label: "Company" },
   ],
   legal: [

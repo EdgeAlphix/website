@@ -7,10 +7,10 @@ export function CtaBanner() {
       <div className="container-width closing-cta-inner">
         <p className="section-label">Explore EdgeAlphix</p>
         <h2>Products and<br />open source.</h2>
-        <p>Use DigitalPlat One, or read about EdgeOS, EdgeTerm, and EdgeIoT.</p>
+        <p>Browse EdgeOS, EdgeTerm, and EdgeIoT, or use DigitalPlat One.</p>
         <div className="cta-actions">
-          <a className="button button-dark" href={productUrl}>Explore DigitalPlat One <span aria-hidden="true">↗</span></a>
-          <Link className="button button-light" href="/projects">See the projects <span aria-hidden="true">→</span></Link>
+          <Link className="button button-dark" href="/projects">Explore open source <span aria-hidden="true">→</span></Link>
+          <a className="button button-light" href={productUrl}>DigitalPlat One <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

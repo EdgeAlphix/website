@@ -73,7 +73,7 @@ button { font: inherit; }
 .system-core span { font: 700 clamp(2rem, 4vw, 4rem)/1 var(--font-heading); letter-spacing: -.09em; }
 .system-core small { margin-top: .55rem; font-size: .44rem; font-weight: 800; letter-spacing: .13em; }
 .system-point { position: absolute; z-index: 2; padding: .62rem .73rem; background: #284033; border: 1px solid #496b53; color: #e8f5e9; font-size: .56rem; font-weight: 800; letter-spacing: .13em; white-space: nowrap; }
-.point-domains { top: 16%; left: 9%; }.point-pages { top: 18%; right: 8%; }.point-forms { bottom: 20%; left: 7%; }.point-analytics { bottom: 15%; right: 8%; }
+.point-os { top: 16%; left: 9%; }.point-term { top: 18%; right: 8%; }.point-iot { bottom: 20%; left: 7%; }.point-one { bottom: 15%; right: 8%; }
 .system-foot { border-top: 1px solid rgba(255,255,255,.14); }
 
 .product-intro { background: #fff; }

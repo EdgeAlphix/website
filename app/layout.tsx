@@ -9,15 +9,15 @@ const bodyFont = Manrope({ variable: "--font-body", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://edgealphix.com"),
-  title: { default: "EdgeAlphix | DigitalPlat One, open source, and network", template: "%s | EdgeAlphix" },
-  description: "EdgeAlphix LLC builds DigitalPlat One, EdgeOS, EdgeTerm, and EdgeIoT, and runs servers across regions.",
+  title: { default: "EdgeAlphix | Open-source software, products, and network", template: "%s | EdgeAlphix" },
+  description: "EdgeAlphix LLC builds EdgeOS, EdgeTerm, EdgeIoT, and DigitalPlat One, and runs servers across regions.",
   openGraph: {
     type: "website",
     siteName: "EdgeAlphix",
-    title: "EdgeAlphix | DigitalPlat One, open source, and network",
-    description: "DigitalPlat One, EdgeOS, EdgeTerm, EdgeIoT, and the EdgeAlphix server network.",
+    title: "EdgeAlphix | Open-source software, products, and network",
+    description: "EdgeOS, EdgeTerm, EdgeIoT, DigitalPlat One, and the EdgeAlphix server network.",
     url: "https://edgealphix.com/",
-    images: [{ url: "/opengraph-image.svg", width: 1200, height: 630, alt: "EdgeAlphix and DigitalPlat One" }],
+    images: [{ url: "/opengraph-image.svg", width: 1200, height: 630, alt: "EdgeAlphix software and network" }],
   },
   twitter: { card: "summary_large_image" },
   icons: { icon: "/favicon.svg" },

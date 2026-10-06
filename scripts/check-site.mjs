@@ -18,6 +18,9 @@ for (const route of routes) {
   }
 }
 assert.match(await readFile(resolve("static", "projects.html"), "utf8"), /id="edgeiot"/);
+const home = await readFile(resolve("static", "index.html"), "utf8");
+assert.match(home, /We build software and/);
+assert.ok(home.indexOf('id="open-source"') < home.indexOf('id="digitalplat-one"'));
 assert.equal((await readFile(resolve("static", "CNAME"), "utf8")).trim(), "edgealphix.com");
 assert.equal(await readFile(resolve("static", ".source-build-id"), "utf8"), await readFile(resolve(".next", "BUILD_ID"), "utf8"));
 await stat(resolve("static", ".nojekyll"));
